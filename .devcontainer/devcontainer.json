@@ -1,5 +1,5 @@
 {
-  "name": "Airline Analytics - Snowflake",
+  "name": "Airline Analytics",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
@@ -24,6 +24,9 @@
         "redhat.vscode-yaml"
       ]
     }
+  },
+  "containerEnv": {
+    "GIT_TOKEN": "${localEnv:CODESPACE_GIT_TOKEN}"
   },
   "postCreateCommand": "pip install dbt-snowflake==1.9.0 && cp .env.example .env && echo '✅ Codespace ready! Edit .env with your credentials, then run: docker compose up -d'"
 }
