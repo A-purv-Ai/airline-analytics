@@ -25,8 +25,5 @@
       ]
     }
   },
-  "containerEnv": {
-    "GIT_TOKEN": "${localEnv:CODESPACE_GIT_TOKEN}"
-  },
-  "postCreateCommand": "pip install dbt-snowflake==1.9.0 && cp .env.example .env && git remote set-url origin https://${GIT_TOKEN}@github.com/A-purv-Ai/airline-analytics.git && echo '✅ Codespace ready! Edit .env with your credentials, then run: docker compose up -d'"
+    "postCreateCommand": "pip install dbt-snowflake==1.9.0 && cp .env.example .env && echo '✅ Codespace ready! Edit .env with your credentials, then run: docker compose up -d'"
 }
