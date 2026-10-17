@@ -12,8 +12,15 @@
   },
   "forwardPorts": [8080, 8501],
   "portsAttributes": {
-    "8080": { "label": "Airflow UI", "onAutoForward": "openBrowser" },
+    "8080": { "label": "Airflow UI", "onAutoForward": "notify" },
     "8501": { "label": "Streamlit Dashboard", "onAutoForward": "notify" }
+    // onAutoForward modes:
+    //   "openBrowser"        : forward and open the browser automatically (your current setting)
+    //   "openBrowserOnce"    : open the browser only the first time per session
+    //   "openPreview"        : open in the built-in preview panel
+    //   "notify"             : show a notification with an Open button, nothing opens by itself
+    //   "silent"             : forward quietly, no notification, no tab
+    //   "ignore"             : do not forward this port automatically
   },
   "customizations": {
     "vscode": {
